@@ -21,7 +21,10 @@ class Distance:
         elif isinstance(other, (int, float)):
             self.km += other
         else:
-            raise TypeError(f"unsupported operand type(s) for +=: 'Distance' and '{type(other).__name__}'")
+            raise TypeError(
+                f"unsupported operand type(s) for +=: "
+                f"'Distance' and '{type(other).__name__}'"
+            )
         return self
 
     def __mul__(self, factor: int | float) -> "Distance":
